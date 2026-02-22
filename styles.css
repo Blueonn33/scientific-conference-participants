@@ -1,0 +1,16 @@
+.navbar {
+  background-color: #431264;
+  text-align: center;
+}
+.image-container {
+  display: inline-block;
+  width: 100%;
+}
+h1 {
+  color: #431264;
+}
+.table-purple th {
+  background-color: #431264 !important;
+  color: white !important;
+  text-align: center;
+}

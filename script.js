@@ -28,6 +28,10 @@ onValue(ref(db, "messages"), (snapshot) => {
   snapshot.forEach((child) => {
     const data = child.val();
 
+    const consultantFull = data.consultantOptional
+      ? `${data.consultant}, ${data.consultantOptional}`
+      : data.consultant;
+
     const row = `
       <tr>
         <td>${data.firstName}</td>
@@ -37,7 +41,7 @@ onValue(ref(db, "messages"), (snapshot) => {
         <td>${data.speciality}</td>
         <td>${data.institution}</td>
         <td>${data.topic}</td>
-        <td>${data.consultant}</td>
+        <td>${consultantFull}</td>
         <td>${data.thematicDirection}</td>
         <td>${data.summary}</td>
         <td>${data.software}</td>

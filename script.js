@@ -33,7 +33,6 @@ onValue(ref(db, "messages"), (snapshot) => {
         <td>${data.firstName}</td>
         <td>${data.surname}</td>
         <td>${data.lastName}</td>
-        <td>${data.email}</td>
         <td>${data.status}</td>
         <td>${data.speciality}</td>
         <td>${data.institution}</td>

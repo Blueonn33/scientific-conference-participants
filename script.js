@@ -29,7 +29,7 @@ onValue(ref(db, "messages"), (snapshot) => {
     const data = child.val();
 
     const consultantFull = data.consultantOptional
-      ? `${data.consultant}, ${data.consultantOptional}`
+      ? `${data.consultant}, </br>${data.consultantOptional}`
       : data.consultant;
 
     const row = `
@@ -43,7 +43,6 @@ onValue(ref(db, "messages"), (snapshot) => {
         <td>${data.topic}</td>
         <td>${consultantFull}</td>
         <td>${data.thematicDirection}</td>
-        <td>${data.summary}</td>
         <td>${data.software}</td>
         <td>${data.timestamp}</td>
       </tr>

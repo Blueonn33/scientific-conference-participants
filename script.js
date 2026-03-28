@@ -24,6 +24,7 @@ const tableBody = document.getElementById("tableBody");
 
 onValue(ref(db, "messages"), (snapshot) => {
   tableBody.innerHTML = "";
+  let counter = 1;
 
   snapshot.forEach((child) => {
     const data = child.val();
@@ -34,6 +35,7 @@ onValue(ref(db, "messages"), (snapshot) => {
 
     const row = `
       <tr>
+        <th>${counter++}</th>
         <td>${data.firstName}</td>
         <td>${data.surname}</td>
         <td>${data.lastName}</td>
